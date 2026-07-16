@@ -80,8 +80,8 @@ Those repositories are intentionally mentioned here as planned locations only. T
 
 ## Identity Clarification
 
-Sastra Innovations is an independent software and enterprise AI company. It is not affiliated with SASTRA Deemed University or Sastra Robotics.
+Sastra Innovations (OPC) Private Limited is an independent software and enterprise AI company based out of Hyderabad, India. It is not affiliated with SASTRA Deemed University or Sastra Robotics.
 
 ---
 
-(c) 2026 Sastra Innovations (OPC) Private Limited. All rights reserved.
+© 2026 Sastra Innovations (OPC) Private Limited. All rights reserved.
