@@ -12,9 +12,9 @@ Some organizations need AI workflows to operate within private or hybrid boundar
 flowchart LR
   Enterprise["Enterprise systems and users"] --> Boundary["Private or hybrid boundary"]
   Boundary --> OS["MedhaOS governance and control"]
-  OS --> Medha["Medha reasoning and model routing"]
+  OS --> Paths["Permitted model and provider paths"]
+  Paths --> Medha["Medha reasoning and permitted-path selection"]
   OS --> PDF["SastraPDF document workflows"]
-  Medha --> Approved["Approved model paths"]
   PDF --> Records["Document workflow records"]
   OS --> Audit["Auditability and observability"]
 ```
@@ -24,8 +24,8 @@ This diagram does not specify hosts, network segments, ports, vendors, credentia
 ## Conceptual Workflow
 
 1. The organization defines data classes, workflow boundaries and approved integration surfaces.
-2. MedhaOS enforces identity, tenant, policy, approval and audit requirements.
-3. Medha routes reasoning through approved model paths for the workflow.
+2. MedhaOS enforces identity, tenant, policy, permitted model or provider paths, approval and audit requirements.
+3. Medha selects an appropriate reasoning path from the set permitted by MedhaOS.
 4. SastraPDF handles document operations within the selected deployment boundary.
 5. Observability and audit records support internal review and hardening.
 
@@ -35,7 +35,7 @@ This diagram does not specify hosts, network segments, ports, vendors, credentia
 - Tenant isolation
 - Data minimization
 - Policy-controlled execution
-- Approved model routing
+- Approved model and provider path governance
 - Human approvals
 - Auditability and observability
 - Organization-specific security review
@@ -49,3 +49,6 @@ Private or hybrid fit should be evaluated against workflow criticality, data sen
 - [Architecture principles](../docs/architecture-principles.md)
 - [Governed enterprise AI whitepaper](../whitepapers/governed-enterprise-ai.md)
 - [Product status](../docs/product-status.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)

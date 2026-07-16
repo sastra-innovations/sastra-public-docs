@@ -13,14 +13,15 @@ flowchart TD
   Intake["Document intake"] --> OS["MedhaOS identity, tenant and policy checks"]
   OS --> PDF["SastraPDF document processing"]
   PDF --> Extracted["Structured document context"]
-  Extracted --> Medha["Medha reasoning and retrieval"]
+  Extracted --> Medha["Medha reasoning, retrieval and permitted-path selection"]
   Medha --> Decision["Recommendation or proposed action"]
-  Decision --> OS
-  OS --> Approval{"Human approval required?"}
-  Approval -->|Yes| Review["Reviewer decision"]
-  Approval -->|No| Execute["Controlled document action"]
-  Review --> Execute
-  Execute --> Record["Auditability and observability"]
+  Decision --> Control{"MedhaOS control decision"}
+  Control -->|Allow| Execute["Controlled document action"]
+  Control -->|Approval required| Review{"Reviewer decision"}
+  Control -->|Deny or escalate| Record["Auditability and observability"]
+  Review -->|Approve or edit| Execute
+  Review -->|Reject or escalate| Record
+  Execute --> Record
 ```
 
 The architecture is conceptual and excludes deployment topology, credentials, ports, private hostnames and proprietary implementation details.
@@ -28,12 +29,12 @@ The architecture is conceptual and excludes deployment topology, credentials, po
 ## Conceptual Workflow
 
 1. Documents enter a scoped workflow.
-2. MedhaOS checks identity, tenant, permission and applicable policy.
+2. MedhaOS checks identity, tenant, permission, applicable policy and permitted model or provider boundaries.
 3. SastraPDF extracts, reviews, compares, transforms or prepares document content.
-4. Medha retrieves relevant context and generates recommendations when useful.
+4. Medha retrieves relevant context, selects within the MedhaOS-permitted model set and generates recommendations when useful.
 5. MedhaOS determines whether the action is allowed, blocked or routed for approval.
-6. Reviewers approve, edit or reject sensitive actions.
-7. Approved document actions are executed and recorded.
+6. Reviewers approve, edit, reject or escalate sensitive actions.
+7. Approved document actions are executed and recorded; rejected or escalated actions do not proceed directly to execution.
 
 ## Governance Controls
 
@@ -57,4 +58,8 @@ The architecture is conceptual and excludes deployment topology, credentials, po
 
 - [Cross-product use cases](../docs/cross-product-use-cases.md)
 - [AI-native document workflows whitepaper](../whitepapers/ai-native-document-workflows.md)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
+- [SastraPDF feature catalogue](https://github.com/sastra-innovations/sastrapdf-public-docs/blob/main/docs/features/feature-catalogue.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
 - [SastraPDF official page](https://sastra.io/products/sastrapdf)

@@ -19,3 +19,6 @@ Use these reference architectures to frame evaluation discussions, design-partne
 - [Architecture principles](../docs/architecture-principles.md)
 - [Cross-product use cases](../docs/cross-product-use-cases.md)
 - [Governed enterprise AI whitepaper](../whitepapers/governed-enterprise-ai.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)

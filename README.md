@@ -14,17 +14,27 @@ Medha, MedhaOS and SastraPDF are connected products with distinct responsibiliti
 
 | Product | Public role | Official page |
 | --- | --- | --- |
-| Medha | Proprietary multi-model AI reasoning and orchestration engine for retrieval-augmented generation, semantic retrieval, persistent context, model routing and governed workflow assistance. | [sastra.io/products/medha](https://sastra.io/products/medha) |
-| MedhaOS | Enterprise AI governance and control layer for identity, RBAC, tenant isolation, privacy controls, policy enforcement, approvals, auditability, observability, model routing and controlled execution. | [sastra.io/products/medhaos](https://sastra.io/products/medhaos) |
-| SastraPDF | Document intelligence and workflow platform supporting more than 70 document operations across extraction, review, transformation, processing and governed document actions. | [sastra.io/products/sastrapdf](https://sastra.io/products/sastrapdf) |
+| Medha | Proprietary, multi-model reasoning and orchestration engine for context-aware enterprise workflows. | [sastra.io/products/medha](https://sastra.io/products/medha) |
+| MedhaOS | Enterprise AI governance and control layer for identity-aware, policy-controlled and accountable AI workflows. | [sastra.io/products/medhaos](https://sastra.io/products/medhaos) |
+| SastraPDF | Document intelligence, collaborative editing and workflow platform for document-heavy enterprise processes. | [sastra.io/products/sastrapdf](https://sastra.io/products/sastrapdf) |
 
-In the stack, Medha provides intelligence and reasoning, MedhaOS provides governance and operational control, and SastraPDF provides document intelligence and document workflows.
+In the stack, Medha provides reasoning, retrieval, context and orchestration; MedhaOS provides governance and operational control; and SastraPDF provides document intelligence, collaborative editing and document-workflow execution.
+
+## Product Documentation
+
+The product-specific public documentation repositories are now available:
+
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
+
+These repositories document proprietary Sastra products. They are public documentation repositories and do not contain product source code, private infrastructure details, credentials, proprietary algorithms or security-sensitive implementation material.
 
 ## Documentation Navigation
 
 | Area | Start here |
 | --- | --- |
-| Product documentation | [Product stack](docs/product-stack.md) and [features overview](docs/features-overview.md) |
+| Product documentation | [Product stack](docs/product-stack.md), [features overview](docs/features-overview.md), [Medha docs](https://github.com/sastra-innovations/medha-public-docs), [MedhaOS docs](https://github.com/sastra-innovations/medha-os-public-docs) and [SastraPDF docs](https://github.com/sastra-innovations/sastrapdf-public-docs) |
 | Enterprise use cases | [Cross-product use cases](docs/cross-product-use-cases.md) |
 | Technical whitepapers | [Whitepapers](whitepapers/README.md) |
 | Reference architectures | [Reference architectures](reference-architectures/README.md) |
@@ -53,19 +63,19 @@ For a fuller conceptual description, see [architecture principles](docs/architec
 
 ## Current Status
 
-The Sastra product stack has progressed through private-alpha development and validation. Current focus areas include technical hardening, documentation, beta preparation, defined workflow validation, design-partner engagement and preparation for enterprise pilot programs.
+The Sastra product stack has completed internal private-alpha testing. Current work focuses on technical hardening, documentation, beta restart preparation, defined-workflow validation and preparation for design-partner evaluation. The products remain pre-commercial and have not yet completed enterprise production validation.
 
 This repository does not publish proprietary source code, operational infrastructure details, security-sensitive configurations, credentials, private organization information or confidential implementation material.
 
-## Future Product Documentation
+## Detailed Product Documentation
 
-This repository currently serves as the umbrella documentation hub for Sastra Innovations. More detailed product-specific documentation is planned for future repositories:
+This repository now connects the completed product-specific public documentation repositories:
 
-- `medha-public-docs`
-- `medha-os-public-docs`
-- `sastrapdf-public-docs`
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
 
-Those repositories are intentionally mentioned here as planned locations only. They are not linked because they have not yet been created.
+The current [SastraPDF public feature catalogue](https://github.com/sastra-innovations/sastrapdf-public-docs/blob/main/docs/features/feature-catalogue.md) documents 119 distinct document operations across ingestion, organization, editing, conversion, extraction, review, protection, accessibility, specialist document processing and workflow-related categories. The count includes catalogue entries classified `Implemented` or `Implemented; validation pending`; AI, collaboration, platform and workflow capabilities are documented separately and are not counted as document operations.
 
 ## Official Links
 
@@ -77,10 +87,13 @@ Those repositories are intentionally mentioned here as planned locations only. T
 - [Services](https://sastra.io/services)
 - [Whitepapers](https://sastra.io/resources/whitepapers)
 - [Contact](https://sastra.io/contact)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
 
 ## Identity Clarification
 
-Sastra Innovations (OPC) Private Limited is an independent software and enterprise AI company based out of Hyderabad, India. It is not affiliated with SASTRA Deemed University or Sastra Robotics.
+Sastra Innovations (OPC) Private Limited is an independent software and enterprise AI company based in Hyderabad, India. It is not affiliated with SASTRA Deemed University or Sastra Robotics.
 
 ---
 

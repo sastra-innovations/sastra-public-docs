@@ -1,6 +1,6 @@
 # Cross-Product Use Cases
 
-These are representative reference use cases for Medha, MedhaOS and SastraPDF. They are not case studies, live deployment evidence or measured result claims.
+These are representative reference use cases for [Medha](https://github.com/sastra-innovations/medha-public-docs), [MedhaOS](https://github.com/sastra-innovations/medha-os-public-docs) and [SastraPDF](https://github.com/sastra-innovations/sastrapdf-public-docs). They are not case studies, deployment evidence or measured result claims.
 
 ## Governed Document Review
 
@@ -8,7 +8,7 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 
 **Products involved:** SastraPDF, Medha and MedhaOS.
 
-**Conceptual workflow:** SastraPDF extracts document structure and review targets. Medha retrieves relevant knowledge and proposes contextual observations. MedhaOS validates identity, policy and approval requirements before recommendations are shown or actions are executed.
+**Conceptual workflow:** MedhaOS establishes identity, tenant, permissions, policy and permitted model boundaries. SastraPDF extracts document structure and review targets. Medha retrieves relevant knowledge, selects within the permitted model set and proposes contextual observations. MedhaOS validates policy and approval requirements before recommendations are shown or actions are executed.
 
 **Governance considerations:** RBAC, tenant isolation, document sensitivity, approval checkpoints, audit trails and reviewer accountability.
 
@@ -20,7 +20,7 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 
 **Products involved:** Medha and MedhaOS, with SastraPDF when source knowledge includes documents.
 
-**Conceptual workflow:** Medha performs semantic retrieval and contextual reasoning across approved sources. MedhaOS scopes access by user, role, tenant and policy. SastraPDF can extract or normalize document-based knowledge before retrieval.
+**Conceptual workflow:** MedhaOS scopes access by user, role, tenant, policy and permitted model or provider paths. SastraPDF can extract or normalize document-based knowledge before retrieval. Medha performs semantic retrieval and contextual reasoning across approved sources inside those boundaries.
 
 **Governance considerations:** Least-privilege access, source authorization, trusted context, privacy controls and observability.
 
@@ -34,7 +34,7 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 
 **Conceptual workflow:** Medha reasons over the task and available context. MedhaOS checks whether the proposed step is allowed, requires approval or must be blocked. SastraPDF performs document operations only when governed controls permit them.
 
-**Governance considerations:** Policy enforcement, controlled execution, approval routing, model routing and auditability.
+**Governance considerations:** Policy evaluation and enforcement boundaries, controlled execution, approval routing, approved model paths and auditability.
 
 **Potential outcome:** Teams may explore AI-assisted workflows that respect business controls and human oversight.
 
@@ -56,7 +56,7 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 
 **Products involved:** SastraPDF and MedhaOS, with Medha when reasoning assistance is required.
 
-**Conceptual workflow:** A user requests a document action. MedhaOS evaluates identity, role, tenant and policy. SastraPDF prepares or executes the action only after the required approval path is satisfied. Medha may help generate recommendations or summaries for reviewers.
+**Conceptual workflow:** A user requests a document action. MedhaOS evaluates identity, role, tenant, policy and approval requirements. Medha may help generate recommendations or summaries for reviewers. SastraPDF prepares or executes the action only when MedhaOS allows it or a required reviewer approves or edits it. Rejected or escalated requests are recorded and do not proceed directly to execution.
 
 **Governance considerations:** Approval chains, least-privilege access, decision logging, sensitive-data controls and rollback procedures defined by the adopting organization.
 
@@ -80,9 +80,9 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 
 **Products involved:** Medha and MedhaOS, with SastraPDF for document tasks.
 
-**Conceptual workflow:** Medha generates a recommendation from scoped context. MedhaOS determines whether the recommendation is informational, needs approval or can trigger a controlled workflow step. Human reviewers accept, modify or reject the recommendation.
+**Conceptual workflow:** Medha generates a recommendation from scoped context. MedhaOS determines whether the recommendation is informational, needs approval, must be denied or can trigger a controlled workflow step. Human reviewers accept, modify, reject or escalate sensitive recommendations before any controlled action proceeds.
 
-**Governance considerations:** Responsible autonomy, review thresholds, auditability, policy enforcement and escalation paths.
+**Governance considerations:** Responsible autonomy, review thresholds, auditability, policy evaluation boundaries and escalation paths.
 
 **Potential outcome:** Teams may use AI recommendations while preserving human decision ownership for important actions.
 
@@ -92,9 +92,9 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 
 **Products involved:** Medha, MedhaOS and SastraPDF depending on the workflow.
 
-**Conceptual workflow:** MedhaOS governs identity, policy and controlled execution. Medha routes reasoning through approved model paths. SastraPDF handles document workflows within the deployment boundary selected for the evaluation.
+**Conceptual workflow:** MedhaOS governs identity, policy, approved model and provider paths and controlled execution. Medha selects an appropriate reasoning path from the set permitted by MedhaOS. SastraPDF handles document workflows within the deployment boundary selected for the evaluation.
 
-**Governance considerations:** Data residency requirements, private connectivity, tenant isolation, model routing, auditability and organization-specific security review.
+**Governance considerations:** Data residency requirements, private connectivity, tenant isolation, approved model paths, auditability and organization-specific security review.
 
 **Potential outcome:** Organizations may evaluate governed AI-native workflows in deployment models aligned to their internal requirements.
 
@@ -103,5 +103,8 @@ These are representative reference use cases for Medha, MedhaOS and SastraPDF. T
 - [Product stack](product-stack.md)
 - [Features overview](features-overview.md)
 - [Architecture principles](architecture-principles.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
 - [Governed document processing reference architecture](../reference-architectures/governed-document-processing.md)
 - [Private or hybrid AI deployment reference architecture](../reference-architectures/private-hybrid-ai-deployment.md)
