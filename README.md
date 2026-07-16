@@ -1,77 +1,87 @@
-# Sastra Innovations
+# Sastra Innovations Public Documentation
 
-**Persistent, governed AI for document-heavy enterprise workflows.**
+**Public technical documentation, whitepapers and reference architectures for Medha, MedhaOS, SastraPDF and governed AI-native enterprise systems.**
 
-Sastra Innovations (OPC) Private Limited is a DPIIT-recognized Indian technology company based in Hyderabad. We build proprietary enterprise AI products and deliver selective software-engineering engagements for document-heavy, information-heavy, and workflow-driven operations.
+Sastra Innovations (OPC) Private Limited is a DPIIT-recognized Indian technology company based in Hyderabad. It builds governed enterprise AI, document intelligence and workflow automation products. This repository is the public umbrella documentation hub for Sastra Innovations and its connected product stack.
 
 Sastra's technology-services foundation dates to 2012. Sastra Innovations was incorporated in 2021 to expand that foundation into a product-and-services company.
 
-## Product stack
+The repository is written for enterprise technology leaders, product and innovation teams, solution architects, technical evaluators, developers researching governed enterprise AI, prospective design partners, search engines and AI discovery systems.
 
-Medha, MedhaOS, and SastraPDF work together as one governed stack.
+## Product Stack
 
-| Product | Role |
+Medha, MedhaOS and SastraPDF are connected products with distinct responsibilities. They can support integrated enterprise workflows, but each product can also be evaluated according to its individual role.
+
+| Product | Public role | Official page |
+| --- | --- | --- |
+| Medha | Proprietary multi-model AI reasoning and orchestration engine for retrieval-augmented generation, semantic retrieval, persistent context, model routing and governed workflow assistance. | [sastra.io/products/medha](https://sastra.io/products/medha) |
+| MedhaOS | Enterprise AI governance and control layer for identity, RBAC, tenant isolation, privacy controls, policy enforcement, approvals, auditability, observability, model routing and controlled execution. | [sastra.io/products/medhaos](https://sastra.io/products/medhaos) |
+| SastraPDF | Document intelligence and workflow platform supporting more than 70 document operations across extraction, review, transformation, processing and governed document actions. | [sastra.io/products/sastrapdf](https://sastra.io/products/sastrapdf) |
+
+In the stack, Medha provides intelligence and reasoning, MedhaOS provides governance and operational control, and SastraPDF provides document intelligence and document workflows.
+
+## Documentation Navigation
+
+| Area | Start here |
 | --- | --- |
-| [**Medha**](https://sastra.io/products/medha) | Sastra's proprietary intelligence and reasoning engine for retrieval, contextual understanding, document-aware assistance, and workflow continuity. |
-| [**MedhaOS**](https://sastra.io/products/medhaos) | The enterprise governance and control layer for memory, privacy, identity, RBAC, tenant isolation, policy enforcement, approvals, auditability, observability, and controlled execution. |
-| [**SastraPDF**](https://sastra.io/products/sastrapdf) | A document intelligence and workflow platform supporting more than 70 operations across creation, extraction, search, review, comparison, transformation, redaction, signing, routing, approvals, and governed document actions. |
+| Product documentation | [Product stack](docs/product-stack.md) and [features overview](docs/features-overview.md) |
+| Enterprise use cases | [Cross-product use cases](docs/cross-product-use-cases.md) |
+| Technical whitepapers | [Whitepapers](whitepapers/README.md) |
+| Reference architectures | [Reference architectures](reference-architectures/README.md) |
+| Architecture principles | [Architecture principles](docs/architecture-principles.md) |
+| Services | [Services overview](docs/services-overview.md) |
+| Product status | [Product status](docs/product-status.md) |
+| FAQ | [FAQ](docs/faq.md) |
 
-**Medha powers intelligence. MedhaOS governs memory, privacy, policy, identity, audit, and execution. SastraPDF applies both to document-heavy business work.**
+## Architecture Principles
 
-## Architecture principles
+Sastra's public architecture philosophy is based on governed execution rather than isolated AI interactions:
 
-Sastra's approach to enterprise AI is built around operational boundaries rather than isolated chat sessions:
-
-- Identity and authorization before access or execution
-- RBAC, tenant isolation, and privacy boundaries
-- Persistent task context and document continuity
-- Policy-aware automation and human approvals
-- Audit trails, observability, and accountable execution
-- Multi-model orchestration with governed tool access
+- Identity before execution
+- Least-privilege access
+- Tenant isolation
+- Trusted and scoped context
+- Policy-controlled actions
+- Human approvals for sensitive workflow steps
+- Auditability and observability
+- Sensitive-data protection
+- Model flexibility
 - Private and hybrid deployment patterns where required
+- Responsible autonomy
 
-The objective is practical AI adoption inside real business workflows, especially where documents, approvals, sensitive information, traceability, and human accountability matter.
+For a fuller conceptual description, see [architecture principles](docs/architecture-principles.md) and the official [Sastra architecture page](https://sastra.io/platform/architecture).
 
-## Selective services
+## Current Status
 
-Sastra is product-led and service-capable. We undertake selected engagements involving:
+The Sastra product stack has progressed through private-alpha development and validation. Current focus areas include technical hardening, documentation, beta preparation, defined workflow validation, design-partner engagement and preparation for enterprise pilot programs.
 
-- AI-enabled workflow automation
-- Document and content intelligence
-- Custom web and mobile business applications
-- Cloud, SaaS, database, API, and integration platforms
-- Operational dashboards, analytics, and reporting
-- Governance, architecture, modernization, and IT consulting
+This repository does not publish proprietary source code, operational infrastructure details, security-sensitive configurations, credentials, private organization information or confidential implementation material.
 
-[Explore Sastra services](https://sastra.io/services)
+## Future Product Documentation
 
-## Current stage
+This repository currently serves as the umbrella documentation hub for Sastra Innovations. More detailed product-specific documentation is planned for future repositories:
 
-The Sastra product stack has completed private-alpha testing. Current work focuses on technical hardening, documentation, beta restart, and design-partner validation.
+- `medha-public-docs`
+- `medha-os-public-docs`
+- `sastrapdf-public-docs`
 
-Sastra is inviting discussions with teams that have defined document-heavy or governed workflow problems suitable for design-partner validation, pilot deployment, or selective implementation support.
+Those repositories are intentionally mentioned here as planned locations only. They are not linked because they have not yet been created.
 
-## About this repository
-
-This repository is the public documentation entry point for Sastra Innovations. Public architecture summaries, product notes, integration guidance, and technical resources may be added here as they are released.
-
-Proprietary source code, production infrastructure, security-sensitive material, customer information, and private architecture documentation are not published in this repository.
-
-## Official links
+## Official Links
 
 - [Sastra Innovations](https://sastra.io)
+- [Medha](https://sastra.io/products/medha)
+- [MedhaOS](https://sastra.io/products/medhaos)
+- [SastraPDF](https://sastra.io/products/sastrapdf)
 - [Platform architecture](https://sastra.io/platform/architecture)
-- [Products](https://sastra.io/products)
 - [Services](https://sastra.io/services)
 - [Whitepapers](https://sastra.io/resources/whitepapers)
-- [LinkedIn](https://www.linkedin.com/company/sastrainnovations/)
-- [Founder: Pavan Athreyapurapu](https://github.com/pavan4sastra)
 - [Contact](https://sastra.io/contact)
 
-## Identity clarification
+## Identity Clarification
 
 Sastra Innovations is an independent software and enterprise AI company. It is not affiliated with SASTRA Deemed University or Sastra Robotics.
 
 ---
 
-© 2026 Sastra Innovations (OPC) Private Limited. All rights reserved.
+(c) 2026 Sastra Innovations (OPC) Private Limited. All rights reserved.
