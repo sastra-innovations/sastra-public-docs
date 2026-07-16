@@ -28,6 +28,12 @@ Sastra services can support organizations in four practical ways:
 
 Sastra services are intended to complement the Medha, MedhaOS and SastraPDF product stack. A services engagement may involve custom software, integration or workflow design, but the strategic focus remains governed enterprise AI, document intelligence and workflow automation.
 
+Product-specific documentation is available for:
+
+- [Medha reasoning and orchestration](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS governance and control](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF document intelligence and workflows](https://github.com/sastra-innovations/sastrapdf-public-docs)
+
 ## Related Documentation
 
 - [Product stack](product-stack.md)

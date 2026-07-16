@@ -7,8 +7,8 @@ Document-heavy enterprises often need more than storage, search or file editing.
 AI-native document workflows combine document intelligence, reasoning and governance:
 
 - SastraPDF handles document extraction, review, transformation, processing and governed document actions.
-- Medha adds semantic retrieval, contextual reasoning and workflow assistance.
-- MedhaOS controls identity, policy, approvals, auditability and observability.
+- Medha adds semantic retrieval, contextual reasoning, task-aware model selection and workflow assistance.
+- MedhaOS controls identity, policy evaluation and enforcement boundaries, approvals, auditability and observability.
 
 The result is a reference approach for document-heavy work where AI assists the process but does not remove operational control.
 
@@ -23,7 +23,7 @@ Traditional document tools often focus on individual file operations. Enterprise
 - Route sensitive steps for approval.
 - Record actions and decisions for later review.
 
-SastraPDF is positioned for document intelligence and workflow operations rather than basic editing alone.
+SastraPDF is positioned for document intelligence and workflow operations rather than basic editing alone. The current [SastraPDF public feature catalogue](https://github.com/sastra-innovations/sastrapdf-public-docs/blob/main/docs/features/feature-catalogue.md) documents 119 distinct document operations across ingestion, organization, editing, conversion, extraction, review, protection, accessibility, specialist document processing and workflow-related categories.
 
 ## Reference Workflow Pattern
 
@@ -36,13 +36,19 @@ sequenceDiagram
   participant Reviewer as Human reviewer
 
   User->>OS: Request document workflow
-  OS->>OS: Check identity, role and policy
+  OS->>OS: Check identity, tenant, role, policy and permitted model boundaries
   OS->>PDF: Permit scoped document processing
   PDF->>Medha: Provide structured context
-  Medha->>OS: Return recommendation for policy check
-  OS->>Reviewer: Route if human approval is required
-  Reviewer->>OS: Approve, edit or reject
-  OS->>PDF: Execute controlled document action
+  Medha->>OS: Return recommendation from permitted reasoning path
+  alt Allowed without approval
+    OS->>PDF: Execute permitted document action
+  else Approval required
+    OS->>Reviewer: Request human review
+    Reviewer->>OS: Approve or edit
+    OS->>PDF: Execute approved document action
+  else Rejected, denied or escalated
+    OS->>OS: Record evidence and stop execution path
+  end
 ```
 
 This pattern is conceptual and does not expose internal deployment topology or implementation details.
@@ -76,4 +82,8 @@ AI-native document workflows should account for:
 - [Cross-product use cases](../docs/cross-product-use-cases.md)
 - [Governed document processing reference architecture](../reference-architectures/governed-document-processing.md)
 - [Product status](../docs/product-status.md)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
+- [SastraPDF feature catalogue](https://github.com/sastra-innovations/sastrapdf-public-docs/blob/main/docs/features/feature-catalogue.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
 - [SastraPDF official page](https://sastra.io/products/sastrapdf)

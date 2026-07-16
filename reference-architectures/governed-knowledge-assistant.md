@@ -11,10 +11,10 @@ The pattern helps organizations evaluate AI-assisted knowledge retrieval without
 ```mermaid
 flowchart LR
   User["Authorized user"] --> Gateway["Governed request boundary"]
-  Gateway --> OS["MedhaOS identity, RBAC and policy"]
+  Gateway --> OS["MedhaOS identity, RBAC, policy and permitted model boundaries"]
   OS --> Sources["Approved knowledge sources"]
   Sources --> Context["Scoped retrieval context"]
-  Context --> Medha["Medha reasoning and orchestration"]
+  Context --> Medha["Medha retrieval, reasoning and permitted-path selection"]
   Medha --> OS
   OS --> Response["Permitted response or workflow step"]
   OS --> Audit["Audit and observability records"]
@@ -25,9 +25,9 @@ This diagram is not an infrastructure topology. It omits internal services, netw
 ## Conceptual Workflow
 
 1. A user asks a knowledge or workflow question.
-2. MedhaOS evaluates identity, role, tenant and policy.
+2. MedhaOS evaluates identity, role, tenant, policy and permitted model or provider paths.
 3. Approved sources are selected according to scope.
-4. Medha performs semantic retrieval and reasoning over permitted context.
+4. Medha performs semantic retrieval and reasoning over permitted context, selecting an appropriate path from the MedhaOS-permitted set.
 5. MedhaOS applies response policy and records the decision path.
 6. The user receives an answer, recommendation or governed next step.
 
@@ -42,10 +42,12 @@ This diagram is not an infrastructure topology. It omits internal services, netw
 
 ## Evaluation Considerations
 
-Enterprise teams should define source boundaries, allowed data classes, approval thresholds, logging expectations and model-routing constraints before piloting this pattern.
+Enterprise teams should define source boundaries, allowed data classes, approval thresholds, logging expectations and model-path constraints before evaluating this pattern.
 
 ## Related Documentation
 
 - [Product stack](../docs/product-stack.md)
 - [Architecture principles](../docs/architecture-principles.md)
 - [Governed enterprise AI whitepaper](../whitepapers/governed-enterprise-ai.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)

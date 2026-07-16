@@ -4,7 +4,7 @@ Sastra's public architecture philosophy focuses on governed enterprise AI: ident
 
 ## Identity Before Execution
 
-Enterprise AI actions should begin with a verified actor, request context and authorization boundary. Identity is not an afterthought; it determines which context, tools, models and document operations can be used.
+Enterprise AI actions should begin with a verified actor, request context and authorization boundary. Identity is not an afterthought; it determines which context, tools, permitted model paths and document operations can be used.
 
 ## Least-Privilege Access
 
@@ -32,7 +32,7 @@ Governed systems should preserve enough decision context to support review. Audi
 
 ## Observability
 
-Operational teams need visibility into workflow behavior, model routing, approval paths, error conditions and usage patterns. Observability helps teams harden systems and evaluate controlled deployment readiness.
+Operational teams need visibility into workflow behavior, permitted model-path decisions, approval paths, error conditions and usage patterns. Observability helps teams harden systems and evaluate controlled deployment readiness.
 
 ## Sensitive-Data Protection
 
@@ -40,7 +40,19 @@ Document intelligence and AI workflows often involve confidential, personal or r
 
 ## Model Flexibility
 
-Enterprise AI systems should be able to route across approved model options when business, privacy, latency or cost requirements differ. Model flexibility does not remove the need for governance and review.
+Enterprise AI systems should be able to route across approved model options when business, privacy, latency or cost requirements differ. Medha can select an appropriate path for the task, while MedhaOS governs which model and provider paths are permitted. Model flexibility does not remove the need for governance and review.
+
+## Cross-Product Control Flow
+
+A governed workflow should preserve this public operating sequence:
+
+1. An authenticated request enters the workflow.
+2. MedhaOS establishes identity, tenant, permission, policy and permitted model or provider boundaries.
+3. SastraPDF supplies document content and document operations when the workflow is document-based.
+4. Medha assembles context, reasons and selects an appropriate path from the permitted set.
+5. MedhaOS evaluates policies and approvals before controlled actions proceed.
+6. SastraPDF or a connected enterprise system executes only permitted actions.
+7. Evidence, outcomes and human decisions are recorded for review.
 
 ## Private And Hybrid Deployment
 
@@ -56,4 +68,7 @@ The goal is not unrestricted automation. The goal is controlled assistance where
 - [Features overview](features-overview.md)
 - [Governed enterprise AI whitepaper](../whitepapers/governed-enterprise-ai.md)
 - [Reference architectures](../reference-architectures/README.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
 - [Official platform architecture](https://sastra.io/platform/architecture)

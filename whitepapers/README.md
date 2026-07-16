@@ -14,4 +14,7 @@ This directory contains public whitepapers for governed enterprise AI, document 
 - [Product stack](../docs/product-stack.md)
 - [Architecture principles](../docs/architecture-principles.md)
 - [Reference architectures](../reference-architectures/README.md)
+- [Medha public documentation](https://github.com/sastra-innovations/medha-public-docs)
+- [MedhaOS public documentation](https://github.com/sastra-innovations/medha-os-public-docs)
+- [SastraPDF public documentation](https://github.com/sastra-innovations/sastrapdf-public-docs)
 - [Official Sastra whitepapers](https://sastra.io/resources/whitepapers)
